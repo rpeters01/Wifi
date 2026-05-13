@@ -2,8 +2,11 @@
 <html>
 <head>
   <title>Ron's WiFi</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+
     body {
       font-family: Arial, sans-serif;
       background-color: #111;
@@ -32,7 +35,23 @@
     .password {
       font-size: 20px;
       color: #00ff99;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #4fd1ff;
+      color: black;
+      padding: 15px 25px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .button:hover {
+      background-color: #7fe0ff;
     }
 
     img {
@@ -45,30 +64,39 @@
       color: #999;
       margin-top: 20px;
     }
+
   </style>
 </head>
 
 <body>
 
 <div class="box">
+
   <h1>Welcome to Ron's WiFi</h1>
 
   <div class="wifi">
-    Network: ASUS_D0_5G_Guest2
+    Network:<br>
+    ASUS_D0_5G_Guest2
   </div>
 
   <div class="password">
-    Password: GuestNetwork2
+    Password:<br>
+    GuestNetwork2
   </div>
 
-  <p>iPhone users:</p>
-  <p>Scan the QR code below to connect.</p>
+  <a class="button"
+     href="wifi.mobileconfig">
+     🍎 iPhone Connect
+  </a>
 
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=WIFI:T:WPA;S:YOUR_WIFI_NAME;P:YOUR_PASSWORD;;">
+  <br>
+
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=WIFI:T:WPA;S:ASUS_D0_5G_Guest2;P:GuestNetwork2;;">
 
   <div class="small">
-    Android users can also tap the NFC tag directly.
+    Android users can tap the NFC tag directly.
   </div>
+
 </div>
 
 </body>
