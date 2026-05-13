@@ -2,57 +2,82 @@
 <html>
 <head>
   <title>Ron's WiFi</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #111;
+      background-image: url('terminator.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: white;
       text-align: center;
       padding: 40px;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.55);
+      min-height: 100vh;
+      padding: 30px;
     }
 
     .box {
-      background: #222;
-      border-radius: 20px;
+      background: rgba(20,20,20,0.55);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 25px;
       padding: 30px;
       max-width: 500px;
       margin: auto;
+      backdrop-filter: blur(6px);
     }
 
     h1 {
-      color: #4fd1ff;
+      color: #ff3b3b;
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px rgba(255,0,0,0.6);
     }
 
     .wifi {
-      font-size: 24px;
+      font-size: 26px;
       margin-top: 20px;
     }
 
     .password {
-      font-size: 20px;
+      font-size: 24px;
       color: #00ff99;
       margin-bottom: 30px;
+      margin-top: 20px;
     }
 
     img {
       width: 250px;
-      margin-top: 20px;
-      border-radius: 10px;
+      margin-top: 25px;
+      border-radius: 15px;
+      border: 5px solid white;
     }
 
     .small {
-      color: #999;
-      margin-top: 20px;
+      color: #ccc;
+      margin-top: 25px;
+      font-size: 18px;
     }
+
   </style>
 </head>
 
 <body>
 
+<div class="overlay">
+
 <div class="box">
-  <h1>Welcome to Ron's WiFi</h1>
+
+  <h1>RON'S WIFI</h1>
 
   <div class="wifi">
     Network:<br>
@@ -75,6 +100,9 @@
   <div class="small">
     Guest WiFi access
   </div>
+
+</div>
+
 </div>
 
 </body>
