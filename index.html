@@ -9,113 +9,38 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url('terminator.png');
-      background-size: cover;
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-color: black;
-      color: white;
-      text-align: center;
+    html, body {
       margin: 0;
       padding: 0;
+      min-height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      background: black;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('terminator.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transform: scale(1.18);
+      filter: brightness(0.75);
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.25);
+      z-index: -1;
+    }
+
+    .page {
       min-height: 100vh;
-    }
-
-    .overlay {
-      background: rgba(0,0,0,0.35);
-      min-height: 100vh;
-      padding: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .box {
-      width: 100%;
-      max-width: 430px;
-      background: rgba(20,20,20,0.62);
-      border: 2px solid rgba(255,255,255,0.25);
-      border-radius: 25px;
-      padding: 24px;
-      margin-top: 20px;
-      backdrop-filter: blur(5px);
-    }
-
-    h1 {
-      color: #ff3b3b;
-      font-size: 42px;
-      margin: 10px 0 20px 0;
-      text-shadow: 0 0 15px rgba(255,0,0,0.7);
-    }
-
-    .wifi {
-      font-size: 24px;
-      margin-top: 15px;
-      word-break: break-word;
-    }
-
-    .password {
-      font-size: 24px;
-      color: #00ff99;
-      margin: 22px 0;
-      word-break: break-word;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.35;
-      margin: 10px 0;
-    }
-
-    img {
-      width: 100%;
-      max-width: 280px;
-      margin-top: 20px;
-      border-radius: 15px;
-      border: 5px solid white;
-    }
-
-    .small {
-      color: #ddd;
-      margin-top: 22px;
-      font-size: 18px;
-    }
-  </style>
-</head>
-
-<body>
-
-<div class="overlay">
-  <div class="box">
-
-    <h1>RON'S WIFI</h1>
-
-    <div class="wifi">
-      Network:<br>
-      ASUS_D0_5G_Guest2
-    </div>
-
-    <div class="password">
-      Password:<br>
-      GuestNetwork2
-    </div>
-
-    <p><strong>iPhone users:</strong></p>
-    <p>Use the network name and password above.</p>
-
-    <p><strong>Android users:</strong></p>
-    <p>Scan the QR code or tap the NFC tag.</p>
-
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=WIFI:T:WPA;S:ASUS_D0_5G_Guest2;P:GuestNetwork2;;">
-
-    <div class="small">
-      Guest WiFi access
-    </div>
-
-  </div>
-</div>
-
-</body>
-</html>
+      padding: 24px
