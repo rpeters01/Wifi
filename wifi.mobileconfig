@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+<dict>
+
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>AutoJoin</key>
+      <true/>
+
+      <key>EncryptionType</key>
+      <string>WPA</string>
+
+      <key>Password</key>
+      <string>GuestNetwork2</string>
+
+      <key>SSID_STR</key>
+      <string>ASUS_D0_5G_Guest2</string>
+
+      <key>PayloadDescription</key>
+      <string>WiFi configuration</string>
+
+      <key>PayloadDisplayName</key>
+      <string>Ron Guest WiFi</string>
+
+      <key>PayloadIdentifier</key>
+      <string>com.ron.wifi</string>
+
+      <key>PayloadType</key>
+      <string>com.apple.wifi.managed</string>
+
+      <key>PayloadUUID</key>
+      <string>11111111-2222-3333-4444-555555555555</string>
+
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+    </dict>
+  </array>
+
+  <key>PayloadDisplayName</key>
+  <string>Ron Guest WiFi</string>
+
+  <key>PayloadIdentifier</key>
+  <string>com.ron.profile</string>
+
+  <key>PayloadRemovalDisallowed</key>
+  <false/>
+
+  <key>PayloadType</key>
+  <string>Configuration</string>
+
+  <key>PayloadUUID</key>
+  <string>66666666-7777-8888-9999-000000000000</string>
+
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+
+</dict>
+</plist>
