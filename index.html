@@ -2,108 +2,119 @@
 <html>
 <head>
   <title>Ron's WiFi</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       font-family: Arial, sans-serif;
       background-image: url('terminator.png');
-      background-size: auto 100%;
-      background-position: right center;
+      background-size: cover;
+      background-position: center top;
       background-repeat: no-repeat;
       background-color: black;
       color: white;
       text-align: center;
-      padding: 40px;
       margin: 0;
+      padding: 0;
       min-height: 100vh;
     }
 
     .overlay {
-      background: rgba(0,0,0,0.55);
+      background: rgba(0,0,0,0.35);
       min-height: 100vh;
-      padding: 30px;
+      padding: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
 
     .box {
-      background: rgba(20,20,20,0.55);
-      border: 2px solid rgba(255,255,255,0.2);
+      width: 100%;
+      max-width: 430px;
+      background: rgba(20,20,20,0.62);
+      border: 2px solid rgba(255,255,255,0.25);
       border-radius: 25px;
-      padding: 30px;
-      max-width: 500px;
-      margin: auto;
-      backdrop-filter: blur(6px);
+      padding: 24px;
+      margin-top: 20px;
+      backdrop-filter: blur(5px);
     }
 
     h1 {
       color: #ff3b3b;
-      font-size: 48px;
-      margin-bottom: 20px;
-      text-shadow: 0 0 15px rgba(255,0,0,0.6);
+      font-size: 42px;
+      margin: 10px 0 20px 0;
+      text-shadow: 0 0 15px rgba(255,0,0,0.7);
     }
 
     .wifi {
-      font-size: 26px;
-      margin-top: 20px;
+      font-size: 24px;
+      margin-top: 15px;
+      word-break: break-word;
     }
 
     .password {
       font-size: 24px;
       color: #00ff99;
-      margin-bottom: 30px;
-      margin-top: 20px;
+      margin: 22px 0;
+      word-break: break-word;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.35;
+      margin: 10px 0;
     }
 
     img {
-      width: 250px;
-      margin-top: 25px;
+      width: 100%;
+      max-width: 280px;
+      margin-top: 20px;
       border-radius: 15px;
       border: 5px solid white;
     }
 
     .small {
-      color: #ccc;
-      margin-top: 25px;
+      color: #ddd;
+      margin-top: 22px;
       font-size: 18px;
     }
-
   </style>
 </head>
 
 <body>
 
 <div class="overlay">
+  <div class="box">
 
-<div class="box">
+    <h1>RON'S WIFI</h1>
 
-  <h1>RON'S WIFI</h1>
+    <div class="wifi">
+      Network:<br>
+      ASUS_D0_5G_Guest2
+    </div>
 
-  <div class="wifi">
-    Network:<br>
-    ASUS_D0_5G_Guest2
+    <div class="password">
+      Password:<br>
+      GuestNetwork2
+    </div>
+
+    <p><strong>iPhone users:</strong></p>
+    <p>Use the network name and password above.</p>
+
+    <p><strong>Android users:</strong></p>
+    <p>Scan the QR code or tap the NFC tag.</p>
+
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=WIFI:T:WPA;S:ASUS_D0_5G_Guest2;P:GuestNetwork2;;">
+
+    <div class="small">
+      Guest WiFi access
+    </div>
+
   </div>
-
-  <div class="password">
-    Password:<br>
-    GuestNetwork2
-  </div>
-
-  <p>iPhone users:</p>
-  <p>Use the network name and password above.</p>
-
-  <p>Android users:</p>
-  <p>Scan the QR code or tap the NFC tag.</p>
-
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=WIFI:T:WPA;S:ASUS_D0_5G_Guest2;P:GuestNetwork2;;">
-
-  <div class="small">
-    Guest WiFi access
-  </div>
-
-</div>
-
 </div>
 
 </body>
